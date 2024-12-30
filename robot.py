@@ -1,13 +1,14 @@
 from iqoptionapi.stable_api import IQ_Option
 import logging
 import time
+import os
 
 # Desativar logs de debug
 logging.disable(logging.DEBUG)
 
 # Suas credenciais de login
-email = "adailnemoforex@gmail.com"
-senha = "@Sus2007nemo3481"
+email = os.getenv("IQ_OPTION_EMAIL")
+senha = os.getenv("IQ_OPTION_PASSWORD")
 
 # Conectar à conta IQ Option
 iqoption = IQ_Option(email, senha)
